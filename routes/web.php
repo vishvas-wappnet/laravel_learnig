@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\demoController; 
 
+use App\Http\Controllers\Single_demo_Controller1;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,5 +58,6 @@ Route::get('/wel' , function()
 //     {}
 // );
 
-
+//calling controller
 Route::get('/controller' ,[demoController::class , 'index']);
+Route::get('/us', Single_demo_Controller1::class); //single controller
