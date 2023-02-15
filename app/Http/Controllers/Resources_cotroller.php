@@ -14,6 +14,8 @@ class Resources_cotroller extends Controller
     public function index(): Response
     {
         //
+
+        echo "user user";
     }
 
     /**
@@ -21,7 +23,8 @@ class Resources_cotroller extends Controller
      */
     public function create(): Response
     {
-        //
+        //  
+        echo "user created succsefuly";
     }
 
     /**
