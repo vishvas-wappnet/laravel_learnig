@@ -12,7 +12,7 @@ class Single_demo_Controller1 extends Controller
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request)   //: Response  
+    public function __invoke(Request $request)   //: Response    .. 
     {
         //
         return view('about');
