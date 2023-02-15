@@ -26,9 +26,15 @@ Route::get('/', function () {
  });
 
 
- Route::get('/name/{name}', function($name)
+ Route::get('/name/{name}/{id?}', function($name ,$id = null)
         {
-            echo "name is:" . $name;
+
+            $data = compact ('name' ,'id');
+            print_r($data);
+            echo "<br>";
+            echo "name is:" . $name . "<br>";
+            echo "id:" . $id;
+            return view('dispay_data')->with($data);
         }
 );
 
@@ -43,3 +49,8 @@ Route::get('/wel' , function()
 {
     return view('welcome1');
 });
+
+
+// Route::get('/data', function()
+//     {}
+// );
