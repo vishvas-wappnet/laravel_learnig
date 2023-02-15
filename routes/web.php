@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\demoController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -54,3 +55,6 @@ Route::get('/wel' , function()
 // Route::get('/data', function()
 //     {}
 // );
+
+
+Route::get('/controller' ,[demoController::class , 'index']);
