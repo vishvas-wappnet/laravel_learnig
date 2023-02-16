@@ -9,7 +9,7 @@
 
                         @csrf
                             <div>
-                                name:<input type="text" name="user_name"> 
+                                name:<input type="text" name="user_name" value="{{old('user_name')}}" /> 
                                 <span class"error">
                                     @error('user_name')
                                             {{$message}}
@@ -17,7 +17,7 @@
                                  </span>
                                  </br>
                         </div>
-                                email:<input type="email" name="user_email"> 
+                                email:<input type="email" name="user_email" /> 
                                 <span class"error">
                                     @error('user_email')
                                             {{$message}}
@@ -25,7 +25,7 @@
                                  </span>
                                  </br>
 
-                                password: <input type="password" name="user_password"> 
+                                password: <input type="password" name="user_password"  /> 
                                 <span class"error">
                                     @error('user_password')
                                             {{$message}}
