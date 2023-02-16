@@ -6,6 +6,7 @@ use App\Http\Controllers\demoController;
 use App\Http\Controllers\Single_demo_Controller1;
 use App\Http\Controllers\Resources_cotroller; 
 use App\Http\Controllers\Registratoin;
+use App\Http\Controllers\User_regi2;
 use App\Models\User_1;
 
 /*
@@ -65,10 +66,10 @@ Route::get('/wel' , function()
 Route::get('/controller' ,[demoController::class , 'index']);
 Route::get('/us', Single_demo_Controller1::class); //single controller
 Route::get('/user', [Resources_cotroller::class]);
-Route::get('/register ', [Registratoin::class , 'index']);// to view registrtion form 
+Route::get('/register', [Registratoin::class , 'index']);// to view registrtion form 
 Route::post('/register' , [Registratoin::class, 'user_register']);
 
-Route::get('/display' , function()
+Route::get('/display/' , function()
 {
     return view('display_data');
 });
@@ -81,3 +82,12 @@ Route::get('/view_data' ,  function()
         }
     );
 
+// Route::get('/user_regi', function()
+//         {
+//             return view('user_regi');
+//         }
+// );
+
+
+Route::get('/user_regi_new/', [User_regi2::class , 'index']); //for user_regi view form 
+Route::post('/user_regi/', [User_regi2::class , 'store']); //for data send to server
