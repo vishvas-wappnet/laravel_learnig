@@ -6,6 +6,7 @@ use App\Http\Controllers\demoController;
 use App\Http\Controllers\Single_demo_Controller1;
 use App\Http\Controllers\Resources_cotroller; 
 use App\Http\Controllers\Registratoin;
+use App\Models\User_1;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,3 +72,12 @@ Route::get('/display' , function()
 {
     return view('display_data');
 });
+
+Route::get('/view_data' ,  function()
+        {
+            $user = User_1::all();
+            echo "<pre>";
+            print_r($user->toArray());
+        }
+    );
+
