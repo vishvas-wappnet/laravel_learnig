@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\demoController; 
 
 use App\Http\Controllers\Single_demo_Controller1;
-use App\Http\Controllers\Resources_cotroller;
+use App\Http\Controllers\Resources_cotroller; 
+use App\Http\Controllers\Registratoin;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,3 +64,10 @@ Route::get('/wel' , function()
 Route::get('/controller' ,[demoController::class , 'index']);
 Route::get('/us', Single_demo_Controller1::class); //single controller
 Route::get('/user', [Resources_cotroller::class]);
+Route::get('/register ', [Registratoin::class , 'index']);// to view registrtion form 
+Route::post('/register' , [Registratoin::class, 'user_register']);
+
+Route::get('/display' , function()
+{
+    return view('display_data');
+});
